@@ -7,6 +7,7 @@ from matplotlib import pyplot as plt
 if __name__ == "__main__":
     prime_file = sys.argv[1]
     fig_file = sys.argv[2]
+
     primes = np.load(prime_file)
     # with open(prime_file, "r", encoding="utf-8") as handle:
         # primes = [int(x) for x in handle.read().split(" ")]
