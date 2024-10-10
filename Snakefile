@@ -21,19 +21,19 @@ def segment_end(i_segment):
 # Rule to execute the whole workflow and create the density figure.
 rule all:
     input:
-        f"{DATA_DIR}/density.png"
+        DATA_DIR + "/density.png"
 
 # Rule to compute all primes up to sqrt(max_prime)
 rule create_small:
     output:
-        f"{DATA_DIR}/small_primes.npy"
+        DATA_DIR + "/small_primes.npy"
     shell:
         "python small_primes.py " + str(SQRT_PRIME) + " {output}"
 
 # Rule to find the primes in a segment, for example [0 - max_prime/10], [max_prime/10 - 2*max_prime/10]
 rule create_segment:
     input:
-        f"{DATA_DIR}/small_primes.npy"
+        DATA_DIR + "/small_primes.npy"
     output:
         temp(DATA_DIR + "/segments/{i_segment}.npy")
     params:
@@ -56,6 +56,6 @@ rule plot_density:
     input:
         DATA_DIR + "/all_primes.npy"
     output:
-        f"{DATA_DIR}/density.png"
+        DATA_DIR + "/density.png"
     shell:
         "python plot_primes.py {input} {output}"
