@@ -17,7 +17,11 @@ This repository is a template for computing the primes up to any number (given e
 
 ### Step 1: Install Snakemake
 
-It is recommended to install snakemake into a conda environment, although snakemake will also work with a native Python installation. Installation instruction are on the Snakemake [website](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html).
+It is recommended to install snakemake into a conda environment, although snakemake will also work with a native Python installation. Installation instruction are on the Snakemake [website](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html). In addition install matplot:
+
+```sh
+conda install matplotlib numpy
+```
 
 ### Step 2: Copy/clone this repository
 
