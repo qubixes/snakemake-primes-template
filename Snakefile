@@ -16,7 +16,7 @@ def segment_end(i_segment):
 # Rule to execute the whole workflow and create the density figure.
 rule all:
     input:
-        f"{DATA_DIR}/density.png"
+        DATA_DIR + "/density.png"
 
 # Rule to compute all primes up to sqrt(max_prime)
 rule create_small:
