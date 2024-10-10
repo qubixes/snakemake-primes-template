@@ -11,7 +11,7 @@ def segment_start(i_segment):
 
 def segment_end(i_segment):
     """Compute the end prime of the segment to be run in parallel."""
-    i = int(i_segment)
+    i_segment = int(i_segment)
     if i_segment < N_SEGMENTS - 1:
         end = (i_segment+1)*(MAX_PRIME//N_SEGMENTS)
     else:
